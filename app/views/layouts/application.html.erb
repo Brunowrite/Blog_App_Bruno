@@ -1,0 +1,48 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Xingu</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <%= stylesheet_link_tag 'custom', media: 'all' %>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+
+  <body class="bg-gray-100 text-gray-900">
+    <nav class="bg-gradient-to-r from-teal-500 to-blue-500 p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="/" class="text-white text-2xl font-bold">Blog Xingu</a>
+        <div class="space-x-4">
+          <% if logged_in? %>
+            <%= link_to 'Nova Publicação', new_article_path, class: 'text-white hover:text-teal-200' %>
+            <%= link_to 'Sair', logout_path, method: :delete, data: { confirm: 'Tem certeza?' }, class: 'text-white hover:text-teal-200' %>
+          <% else %>
+            <%= link_to 'Login', login_path, class: 'text-white hover:text-teal-200' %>
+            <%= link_to 'Cadastro', new_user_path, class: 'text-white hover:text-teal-200' %>
+          <% end %>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mx-auto mt-8 p-4">
+      <% if flash[:notice] %>
+        <div class="bg-green-500 text-white p-4 rounded-md mb-4"><%= flash[:notice] %></div>
+      <% elsif flash[:alert] %>
+        <div class="bg-red-500 text-white p-4 rounded-md mb-4"><%= flash[:alert] %></div>
+      <% end %>
+
+      <%= yield %>
+    </div>
+
+    <footer class="bg-gray-800 text-white text-center py-4 mt-8">
+      <p>&copy; <%= Time.current.year %> Blog xingu</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<h1 class="text-4xl font-bold text-center text-teal-600 mb-8">Cadastro de Usuário</h1>
+
+<div class="max-w-sm mx-auto bg-white p-8 rounded-lg shadow-lg">
+  <%= form_with model: @user, local: true do |form| %>
+    
+    <% if @user.errors.any? %>
+      <div class="mb-4">
+        <div class="bg-red-100 text-red-700 p-4 rounded-lg">
+          <h4 class="font-semibold">Por favor, corrija os erros abaixo:</h4>
+          <ul class="list-disc pl-5">
+            <% @user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="form-group mb-4">
+      <%= form.label :email, "Email", class: "text-sm font-medium text-gray-700" %>
+      <%= form.email_field :email, class: "w-full px-4 py-2 mt-1 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500" %>
+    </div>
+
+    <div class="form-group mb-4">
+      <%= form.label :password, "Senha", class: "text-sm font-medium text-gray-700" %>
+      <%= form.password_field :password, class: "w-full px-4 py-2 mt-1 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500" %>
+      <small class="text-sm text-gray-500">A senha deve ter **pelo menos 6 caracteres**.</small>
+    </div>
+
+    <div class="form-group mb-6">
+      <%= form.label :password_confirmation, "Confirmar Senha", class: "text-sm font-medium text-gray-700" %>
+      <%= form.password_field :password_confirmation, class: "w-full px-4 py-2 mt-1 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500" %>
+    </div>
+
+    <div class="mb-4">
+      <%= form.submit "Cadastrar", class: "w-full py-2 px-4 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400" %>
+    </div>
+  <% end %>
+
+  <div class="text-center">
+    <%= link_to "Já possui uma conta? Faça login", login_path, class: "text-teal-500 hover:text-teal-600" %>
+  </div>
+</div>

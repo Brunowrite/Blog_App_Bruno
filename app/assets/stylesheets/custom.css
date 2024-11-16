@@ -1,0 +1,134 @@
+/* custom.css */
+
+/* Cor de fundo geral do site */
+body {
+  background-color: #f8fafc; /* Um tom suave de cinza claro */
+}
+
+/* Personalizando o título principal */
+h1, h2, h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: #1a202c; /* Cor mais escura para contraste */
+}
+
+/* Estilizando os links */
+a {
+  color: #38b2ac; /* Cor do link em verde-azulado */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2c7a7b; /* Um tom mais escuro de verde-azulado no hover */
+  text-decoration: underline;
+}
+
+/* Personalizando os botões */
+button, .btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+button.bg-teal-500 {
+  background-color: #38b2ac; /* Cor do botão principal */
+}
+
+button.bg-teal-500:hover {
+  background-color: #2c7a7b; /* Cor do botão no hover */
+}
+
+button.bg-teal-500:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(56, 178, 172, 0.5);
+}
+
+/* Adicionando sombreamento suave aos cartões */
+.bg-white {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Modificando o fundo do rodapé */
+footer.bg-gray-800 {
+  background-color: #2d3748; /* Tom mais suave de cinza escuro */
+  color: #f7fafc; /* Cor branca para o texto */
+}
+
+footer.bg-gray-800 a {
+  color: #38b2ac; /* Cor do link no rodapé */
+}
+
+footer.bg-gray-800 a:hover {
+  color: #2c7a7b;
+}
+
+/* Ajustando os campos de formulário */
+input, textarea {
+  border-radius: 0.375rem; /* Bordas mais arredondadas */
+  border: 2px solid #e2e8f0; /* Borda mais leve */
+}
+
+input:focus, textarea:focus {
+  border-color: #38b2ac; /* Cor de borda quando focado */
+  box-shadow: 0 0 0 1px rgba(56, 178, 172, 0.5); /* Sombra suave ao focar */
+}
+
+/* Adicionando uma borda nos cartões de comentário */
+.comment {
+  border-left: 4px solid #38b2ac;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* custom.css */
+
+/* Definindo uma cor de fundo suave para a página */
+body {
+  background-color: #f0f4f8; /* Cor de fundo suave */
+}
+
+/* Estilizando o formulário para ficar mais limpo e moderno */
+.bg-white {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Melhorando o estilo dos links */
+a {
+  color: #38b2ac; /* Cor dos links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2c7a7b;
+  text-decoration: underline;
+}
+
+/* Mensagens de erro em destaque */
+.bg-red-100 {
+  background-color: #fef2f2;
+}
+
+.text-red-700 {
+  color: #e53e3e;
+}
+
+/* Botões com transições suaves */
+button, .btn {
+  transition: all 0.3s ease;
+}
+
+button.bg-teal-500:hover {
+  background-color: #2c7a7b; /* Escurece o botão ao passar o mouse */
+}
+
+/* Ajustando bordas e arredondamentos */
+input, textarea {
+  border-radius: 0.375rem;
+  border: 2px solid #e2e8f0;
+}
+
+input:focus, textarea:focus {
+  border-color: #38b2ac;
+  box-shadow: 0 0 0 1px rgba(56, 178, 172, 0.5);
+}
